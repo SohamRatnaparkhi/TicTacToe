@@ -173,6 +173,12 @@ def main():
                 print('            Player A is the WINNER!')
                 print("_______________________________________________________\n")
                 end_greet()
+                # Ask user whether he wishes to replay the game
+                restart = input("\nDo you want to play again? Enter Yes or No: \nDecision :- ")
+                if (restart == 'y' or restart == 'yes' or restart == 'Yes' or restart == 'YES'):
+                    main()
+                else:
+                    print("\nGAME OVER")
                 break
         else:
             final_board = place_marker(test_board, mark_B, posn)
@@ -184,6 +190,12 @@ def main():
                 print("            Player B is the WINNER!")
                 print("_______________________________________________________\n")
                 end_greet()
+                 # Ask user whether he wishes to replay the game
+                restart = input("\nDo you want to play again? Enter Yes or No: \nDecision :- ")
+                if (restart == 'y' or restart == 'yes' or restart == 'Yes' or restart == 'YES'):
+                    main()
+                else:
+                    print("\nGAME OVER")
                 break
         user_input.append(posn)
         if full_board(final_board) == True:
@@ -191,6 +203,12 @@ def main():
             print("_______________________________________________________")
             print("       There is a TIE between the two players")
             print("_______________________________________________________\n")
+             # Ask user whether he wishes to replay the game
+            restart = input("\nDo you want to play again? Enter Yes or No: \nDecision :- ")
+            if (restart == 'y' or restart == 'yes' or restart == 'Yes' or restart == 'YES'):
+                main()
+            else:
+                 print("\nGAME OVER")
             break
         
         display_board(final_board)
@@ -198,10 +216,3 @@ def main():
         print("_______________________________________________________\n")
 
 main()
-"""Ask the user whether they want to replay the game or not
-"""
-restart = input("\nDo you want to play again? Enter Yes or No: \nDecision :- ")
-if (restart == 'y' or restart == 'yes' or restart == 'Yes'):
-    main()
-else:
-    print("\nGAME OVER")
